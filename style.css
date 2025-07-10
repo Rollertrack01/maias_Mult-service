@@ -282,3 +282,40 @@ form input, form textarea {
   animation-play-state: paused; /* Para piscar quando passar o mouse */
   transform: scale(1.1);
 }
+
+#faq {
+  padding: 30px;
+  background: #f7f7f7;
+  border-top: 3px solid #e91e63;
+  font-family: 'Arial', sans-serif;
+}
+
+#faq h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.faq-item h3 {
+  cursor: pointer;
+  color: #e91e63;
+  transition: all 0.3s ease;
+}
+
+.faq-item h3:hover {
+  text-decoration: underline;
+}
+
+.faq-item p {
+  display: none;
+  margin-top: 10px;
+  line-height: 1.6;
+  color: #444;
+}
