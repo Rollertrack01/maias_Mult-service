@@ -41,6 +41,12 @@ function carregarAvisos() {
         });
       }
     })
+
+    function toggleFAQ(element) {
+  const para = element.nextElementSibling;
+  para.style.display = (para.style.display === "block") ? "none" : "block";
+}
+
     .catch(err => console.error('Erro ao carregar dados:', err));
 }
 
