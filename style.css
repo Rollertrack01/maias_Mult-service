@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+   background-color: #bd7f70;
+  color: #dfdada;
+  line-height: 1.6;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header {
+  background: #8f5050;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+section {
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero {
+  background: url('https://images.unsplash.com/photo-1587574293340-ec7d2d03f1a4') center/cover;
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
+  opacity: 1;
+  transform: none;
+}
+
+.hero h1 {
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: fadeIn 2s ease-in-out;
+}
+.hero p {
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+.btn {
+  background: #b30000;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #800000;
+}
+
+.services .card {
+  max-width: 300px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+#sobre p {
+  text-align: justify;
+}
+
+.services .card:hover {
+  transform: translateY(-5px);
+}
+
+.services img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.services .desc {
+  padding: 1rem;
+  font-size: 0.95rem;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+#avisos ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  color: #444;
+  font-size: 1rem;
+}
+
+footer {
+  background: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 2rem;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.whatsapp-float img {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s;
+}
+
+.whatsapp-float img:hover {
+  transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+form input, form textarea {
+  width: 100%;
+  max-width: 600px;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.portfolio .card {
+  width: 250px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.portfolio .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.portfolio .card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.portfolio .desc {
+  padding: 1rem;
+  text-align: left;
+}
+
+.portfolio .desc h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #b30000;
+}
+
+
+.full-width {
+  max-width: 100%;
+  width: 100%;
+  padding: 3rem 0;
+}
+
+.services .desc,
+.portfolio .desc {
+  color: #333;      
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+#avisos {
+  background-color: #f9f9f9;
+  color: #222;              
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 1000px;
+  margin: 2rem auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#avisos h2 {
+  color: #b30000; 
+  margin-bottom: 1rem;
+}
+
+#avisos ul {
+  list-style: disc inside;
+  color: #444444;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding-left: 1rem;
+}
+
+/* Animação de piscar */
+@keyframes piscar {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+/* Aplica a animação ao botão WhatsApp */
+.whatsapp-float img {
+  animation: piscar 1.5s infinite;
+  /* Outras propriedades que você já tem */
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float img:hover {
+  animation-play-state: paused; /* Para piscar quando passar o mouse */
+  transform: scale(1.1);
+}
