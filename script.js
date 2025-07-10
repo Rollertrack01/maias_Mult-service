@@ -33,6 +33,7 @@ function carregarAvisos() {
     .then(dados => {
       const lista = document.getElementById('lista-avisos');
       if (lista && dados.avisos) {
+        lista.innerHTML = ''; // 🧽 Limpa a lista antes de adicionar os novos avisos
         dados.avisos.forEach(msg => {
           const li = document.createElement('li');
           li.textContent = msg;
@@ -42,3 +43,4 @@ function carregarAvisos() {
     })
     .catch(err => console.error('Erro ao carregar dados:', err));
 }
+
