@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://teusite.render.com/sitemap.xml
+Sitemap: https://maias-mult-service.onrender.com/sitemap.xml
