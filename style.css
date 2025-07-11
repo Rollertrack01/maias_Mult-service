@@ -411,3 +411,16 @@ footer .social img:hover {
 .btn-whatsapp:hover {
   background-color: #128C7E;
 }
+
+body h2 {
+text-align: center;
+color: #ece8e8;
+margin-bottom: 2rem;
+}
+
+.subtitulo {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.2rem;
+
+}
