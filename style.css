@@ -1,18 +1,19 @@
+/* RESET & BASE */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
 }
 
 body {
-   background-color: #bd7f70;
+  background-color: #bd7f70;
   color: #dfdada;
   line-height: 1.6;
-  font-family: 'Montserrat', sans-serif;
 }
 
+/* HEADER */
 header {
   background: #8f5050;
   color: #fff;
@@ -26,11 +27,11 @@ nav a {
   text-decoration: none;
   font-weight: bold;
 }
-
 nav a:hover {
   text-decoration: underline;
 }
 
+/* SECTION */
 section {
   padding: 3rem 2rem;
   max-width: 1000px;
@@ -39,14 +40,21 @@ section {
   transform: translateY(50px);
   transition: all 1s ease;
 }
-
 section.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
+.full-width {
+  max-width: 100%;
+  width: 100%;
+  padding: 3rem 0;
+}
+
+/* HERO */
 .hero {
-  background: url('https://images.unsplash.com/photo-1587574293340-ec7d2d03f1a4') center/cover;
+  background: url("https://images.unsplash.com/photo-1587574293340-ec7d2d03f1a4")
+    center/cover;
   color: white;
   padding: 6rem 2rem;
   text-align: center;
@@ -55,15 +63,16 @@ section.visible {
 }
 
 .hero h1 {
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
   font-size: 3rem;
   margin-bottom: 1rem;
   animation: fadeIn 2s ease-in-out;
 }
 .hero p {
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 }
 
+/* BOTÃO */
 .btn {
   background: #b30000;
   color: #fff;
@@ -76,39 +85,11 @@ section.visible {
   border: none;
   cursor: pointer;
 }
-
 .btn:hover {
   background: #800000;
 }
 
-.services .card {
-  max-width: 300px;
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}
-
-#sobre p {
-  text-align: justify;
-}
-
-.services .card:hover {
-  transform: translateY(-5px);
-}
-
-.services img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.services .desc {
-  padding: 1rem;
-  font-size: 0.95rem;
-}
-
+/* CARDS */
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -116,72 +97,93 @@ section.visible {
   justify-content: center;
 }
 
-#avisos ul {
-  list-style: disc;
-  padding-left: 1.5rem;
-  color: #444;
-  font-size: 1rem;
-}
-
-footer {
-  background: #222;
-  color: #ccc;
-  text-align: center;
-  padding: 2rem;
-}
-
-footer a {
-  color: #ccc;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-footer .social {
-  margin-bottom: 10px;
-}
-
-footer .social a {
-  margin: 0 10px;
-  display: inline-block;
-}
-
-footer .social img {
-  width: 32px;
-  height: 32px;
-  transition: transform 0.3s ease;
-}
-
-footer .social img:hover {
-  transform: scale(1.2);
-}
-
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 999;
-}
-
-.whatsapp-float img {
-  width: 60px;
-  height: 60px;
+/* GERAL SERVIÇOS E PORTFÓLIO */
+.services .card,
+.portfolio .card {
+  max-width: 300px;
+  width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
 }
-
-.whatsapp-float img:hover {
-  transform: scale(1.1);
+.services .card:hover,
+.portfolio .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
+.services .desc,
+.portfolio .desc {
+  padding: 1rem;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
-form input, form textarea {
+/* PORTFÓLIO ESPECÍFICO */
+.portfolio .desc h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #b30000;
+}
+
+/* GALERIA DE IMAGENS CARROSSEL */
+.galeria-servico.carrossel {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.galeria-servico.carrossel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;        /* garante que ocupe toda a largura */
+  height: 100%;       /* garante que ocupe toda a altura */
+  object-fit: cover;  /* garante que preencha sem deformar */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  border-radius: 0;   /* remove bordas internas, se quiser */
+}
+
+.galeria-servico.carrossel img.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* SOBRE */
+#sobre p {
+  text-align: justify;
+}
+
+/* AVISOS */
+#avisos {
+  background-color: #f9f9f9;
+  color: #222;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 1000px;
+  margin: 2rem auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#avisos h2 {
+  color: #b30000;
+  margin-bottom: 1rem;
+}
+#avisos ul {
+  list-style: disc inside;
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding-left: 1rem;
+}
+
+/* FORMULÁRIO */
+form input,
+form textarea {
   width: 100%;
   max-width: 600px;
   padding: 0.75rem;
@@ -190,77 +192,72 @@ form input, form textarea {
   border-radius: 5px;
 }
 
-.portfolio .card {
-  width: 250px;
-  background: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}
-
-.portfolio .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-.portfolio .card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-}
-
-.portfolio .desc {
-  padding: 1rem;
-  text-align: left;
-}
-
-.portfolio .desc h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
-  color: #b30000;
-}
-
-
-.full-width {
-  max-width: 100%;
-  width: 100%;
-  padding: 3rem 0;
-}
-
-.services .desc,
-.portfolio .desc {
-  color: #333;      
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-#avisos {
-  background-color: #f9f9f9;
-  color: #222;              
+/* FOOTER */
+footer {
+  background: #222;
+  color: #ccc;
+  text-align: center;
   padding: 2rem;
-  border-radius: 10px;
-  max-width: 1000px;
-  margin: 2rem auto;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+footer a {
+  color: #ccc;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
 }
 
-#avisos h2 {
-  color: #b30000; 
+footer .social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
   margin-bottom: 1rem;
 }
 
-#avisos ul {
-  list-style: disc inside;
-  color: #444444;
-  font-size: 1rem;
-  line-height: 1.5;
-  padding-left: 1rem;
+footer .social img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
-/* Animação de piscar */
+footer .social img:hover {
+  transform: scale(1.2);
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+.whatsapp-float img {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  animation: piscar 1.5s infinite;
+}
+.whatsapp-float img:hover {
+  animation-play-state: paused;
+  transform: scale(1.1);
+}
+
+/* ANIMAÇÕES */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @keyframes piscar {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {
@@ -268,54 +265,143 @@ form input, form textarea {
   }
 }
 
-/* Aplica a animação ao botão WhatsApp */
-.whatsapp-float img {
-  animation: piscar 1.5s infinite;
-  /* Outras propriedades que você já tem */
-  width: 60px;
-  height: 60px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+.products .card {
+  max-width: 300px;
+  width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+.products .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.whatsapp-float img:hover {
-  animation-play-state: paused; /* Para piscar quando passar o mouse */
-  transform: scale(1.1);
+.products .desc {
+  padding: 1rem;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
+
+/* --- FAQ --- */
 #faq {
-  padding: 30px;
-  background: #f7f7f7;
-  border-top: 3px solid #e91e63;
-  font-family: 'Arial', sans-serif;
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  color: #222;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #faq h2 {
+  margin-bottom: 2rem;
+  color: #b30000;
   text-align: center;
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #333;
 }
 
 .faq-item {
-  margin-bottom: 20px;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 10px;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
 }
 
 .faq-item h3 {
   cursor: pointer;
-  color: #e91e63;
-  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+  transition: color 0.3s ease;
 }
 
 .faq-item h3:hover {
-  text-decoration: underline;
+  color: #b30000;
 }
 
 .faq-item p {
   display: none;
-  margin-top: 10px;
   line-height: 1.6;
   color: #444;
+  padding-left: 1rem;
+  transition: all 0.3s ease;
+}
+
+.filtros-produtos {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.filtro-btn {
+  background-color: #b30000;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  margin: 0 0.3rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.filtro-btn:hover,
+.filtro-btn.active {
+  background-color: #800000;
+}
+
+#produtos {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+#produtos h2 {
+  text-align: center;
+  color: #b30000;
+  margin-bottom: 2rem;
+}
+
+.filtros {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.filtros button {
+  background-color: #b30000;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.filtros button:hover {
+  background-color: #800000;
+}
+
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.btn-whatsapp {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #25D366;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  background-color: #128C7E;
 }
