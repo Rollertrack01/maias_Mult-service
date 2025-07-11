@@ -1,30 +1,42 @@
 <!DOCTYPE html>
-<html lang="pt"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="jbYJZXbXU8c3o-1EYc1O58U0BnuXNc64u8GEiQQZcMI" />
-    <meta name="robots" content="index, follow">
-    <link rel="shortcut icon" href="imagens/favicon.ico">
-    <title>Maias Mult-Service | Serigrafia e Personalização</title>
-    <meta name="description" content="Serviços de serigrafia, design gráfico e soluções criativas no coração de Moçambique. Qualidade e inovação para sua marca.">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="google-site-verification"
+      content="jbYJZXbXU8c3o-1EYc1O58U0BnuXNc64u8GEiQQZcMI"
+    />
+    <link rel="shortcut icon" href="imagens/favicon.ico" />
+    <title>Maias Mult-Service</title>
+    <meta
+      name="description"
+      content="Serviços de serigrafia, design gráfico e soluções criativas no coração de Moçambique. Qualidade e inovação para sua marca."
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-6PBZ4VFWF7"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-6PBZ4VFWF7");
+    </script>
   </head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6PBZ4VFWF7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-6PBZ4VFWF7');
-</script>
-
-	
   <body>
     <header>
-      <img src="imagens/novo.png" alt="Maias Mult-Service Logo" class="logo">
+      <img src="imagens/novo.png" alt="Maias Mult-Service Logo" class="logo" />
       <h1>Maias Mult-Service</h1>
       <nav>
         <a href="#inicio">Início</a>
@@ -37,13 +49,20 @@
 
     <section class="hero full-width visible" id="inicio">
       <h1>Damos vida à sua identidade visual!</h1>
-      <p>Serigrafia, brindes personalizados, estampagem e mais.</p>
+      <p>
+        Serigrafia, brindes personalizados, estampagem, venda de material de
+        escritorio e mais.
+      </p>
       <a href="#contato" class="btn">Pedir Orçamento</a>
     </section>
 
     <section id="avisos" class="visible">
       <h2>Novidades</h2>
-      <ul id="lista-avisos"><li>Promoção: 20% de desconto em camisetas até dia 15!</li><li>Agora também personalizamos garrafas térmicas!</li><li>Novo serviço: impressão em tecido jeans!</li></ul>
+      <ul>
+        <li>Promoção: 20% de desconto em camisetas até dia 15!</li>
+        <li>Agora também personalizamos garrafas térmicas!</li>
+        <li>Novo serviço: impressão em tecido jeans!</li>
+      </ul>
     </section>
 
     <section id="sobre" class="visible">
@@ -88,36 +107,64 @@
       <h2>Serviços</h2>
       <div class="grid">
         <div class="card">
-          <img src="/imagens/camisa_estamp.jpg" alt="Estampagem em camisetas">
+          <div class="galeria-servico carrossel">
+            <img
+              class="slide active"
+              src="/imagens/camisa_estamp.jpg"
+              alt="Estampagem 1"
+            />
+            <img
+              class="slide"
+              src="/imagens/camisetes_enventos.jpg"
+              alt="Camisa Estampada"
+            />
+            <img
+              class="slide"
+              src="/imagens/uniformes_personal.jpg"
+              alt="Bombeiros no Brasil"
+            />
+          </div>
           <div class="desc">
             <h3>Estampagem em Camisetas</h3>
             <p>
-              Personalizamos camisetas com estampas de alta qualidade para
-              eventos, marcas, equipes e muito mais. Trabalhamos com serigrafia,
-              transfer e sublimação para garantir durabilidade e fidelidade nas
-              cores.
+              Estampas em serigrafia, transfer e sublimação para eventos,
+              marcas, escolas e mais.
             </p>
           </div>
         </div>
+
         <div class="card">
-          <img src="/imagens/chicara.jpg" alt="Brindes personalizados">
-          <div class="desc">
-            <h3>Brindes Personalizados</h3>
-            <p>
-              Oferecemos personalização de canecas, chaveiros, capas, sacolas e
-              muito mais. Ideal para campanhas promocionais, lembranças e
-              divulgação de marcas com estilo e impacto.
-            </p>
+          <div class="galeria-servico carrossel">
+            <img
+              class="slide active"
+              src="/imagens/bone.jpg"
+              alt="Boné Personalizado"
+            />
           </div>
-        </div>
-        <div class="card">
-          <img src="/imagens/bone.jpg" alt="Bonés e sacolas personalizados">
           <div class="desc">
             <h3>Impressão em Bonés e Sacolas</h3>
             <p>
-              Realizamos impressão em bonés e sacolas com excelente acabamento.
-              Perfeito para empresas, escolas, eventos e brindes institucionais
-              com identidade visual forte.
+              Impressão de alta qualidade para brindes e ações promocionais com
+              forte identidade visual.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="galeria-servico carrossel">
+            <img
+              class="slide active"
+              src="/imagens/chicara.jpg"
+              alt="Caneca Personalizada"
+            />
+
+            />
+          </div>
+          <div class="desc">
+            <h3>Brindes Personalizados</h3>
+            <p>
+              Personalizamos canecas, capas, chaveiros, mochilas e muito mais.
+              Ideal para presentes e marketing.
             </p>
           </div>
         </div>
@@ -126,94 +173,217 @@
 
     <section id="portfolio" class="portfolio full-width visible">
       <h2>Portfólio</h2>
-      <p class="subtitulo">
-        Veja alguns dos nossos trabalhos mais populares e inspiradores
-      </p>
-
+      <p class="subtitulo">Veja alguns dos nossos trabalhos</p>
       <div class="grid">
         <div class="card">
-          <img src="imagens/camisetes_enventos.jpg" alt="Camisetas para eventos">
+          <div class="galeria-servico carrossel">
+            <img
+              class="slide active"
+              src="/imagens/camisa_estamp.jpg"
+              alt="Estampagem 1"
+            />
+            <img
+              class="slide"
+              src="/imagens/camiseta_personalidada_da_maias_multservice.jpg"
+              alt="Camisa Estampada"
+            />
+            <img
+              class="slide"
+              src="/imagens/camiseta_dia_de_bajone.jpg"
+              alt="Camisa Bajone"
+            />
+          </div>
           <div class="desc">
-            <h3>Camisetas para Eventos</h3>
+            <h3>Estampagem em Camisetas</h3>
             <p>
-              Estampagem profissional de camisetas para grupos, escolas e
-              festivais.
+              Veja exemplos reais de camisetas estampadas produzidas por nossa
+              equipe.
             </p>
           </div>
         </div>
 
         <div class="card">
-          <img src="/imagens/chicara.jpg" alt="Canecas e brindes">
-          <div class="desc">
-            <h3>Canecas e Brindes</h3>
-            <p>
-              Personalização em porcelana e vidro para presentes, brindes e
-              promoção da marca.
-            </p>
+          <div class="galeria-servico carrossel">
+            <img
+              class="slide active"
+              src="/imagens/bone.jpg"
+              alt="Boné Personalizado"
+            />
           </div>
-        </div>
-
-        <div class="card">
-          <img src="imagens/bone.jpg" alt="Bonés e sacolas">
           <div class="desc">
             <h3>Bonés e Sacolas</h3>
             <p>
-              Design exclusivo e acabamento de qualidade em materiais
-              resistentes e duráveis.
+              Alguns dos nossos projetos com foco em brindes e materiais
+              promocionais personalizados.
             </p>
           </div>
         </div>
 
         <div class="card">
-          <img src="imagens/" alt="Estampagem em mochilas">
-          <div class="desc">
-            <h3>Mochilas e Capas</h3>
-            <p>
-              Estilo e identidade visual com produtos personalizados para
-              escolas e empresas.
-            </p>
+          <div class="galeria-servico carrossel">
+            <img
+              class="slide active"
+              src="/imagens/chicara.jpg"
+              alt="Caneca 1"
+            />
+            <img
+              class="slide"
+              src="/imagens/chicaras_personalizadas.jpg"
+              alt="Caneca 2"
+            />
+            <img
+              class="slide"
+              src="/imagens/chicaras_personalidas_1.jpg"
+              alt="Caneca 3"
+            />
           </div>
-        </div>
-
-        <div class="card">
-          <img src="imagens/uniformes_personal.jpg" alt="Uniformes personalizados">
           <div class="desc">
-            <h3>Uniformes Personalizados</h3>
+            <h3>Brindes</h3>
             <p>
-              Estampagem em tecidos para equipes, lojas, instituições e
-              fábricas.
-            </p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="imagens/adesivos.jpg" alt="Gráficos promocionais">
-          <div class="desc">
-            <h3>Gráficos Promocionais</h3>
-            <p>
-              Adesivos, posters, banners e sinalização criativa com impressão de
-              alta definição.
+              Trabalhos com canecas personalizadas que marcaram eventos,
+              empresas e presentes criativos.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-	  <section id="faq">
-  <h2>Perguntas Frequentes</h2>
-  <div class="faq-item">
-    <h3 onclick="toggleFAQ(this)">Como funciona a serigrafia?</h3>
-    <p>Serigrafia é uma técnica de impressão onde a tinta é transferida para o material através de uma tela. Ideal para camisetas, brindes e material publicitário. Usamos equipamentos modernos para garantir qualidade e durabilidade em cada peça.</p>
-  </div>
-  <div class="faq-item">
-    <h3 onclick="toggleFAQ(this)">Quanto custa uma impressão personalizada?</h3>
-    <p>O preço varia conforme o tipo de material, quantidade e complexidade do design. Mas garantimos orçamentos acessíveis, com ótimo custo-benefício. Peça já seu orçamento gratuito pelo WhatsApp!</p>
-  </div>
-  <div class="faq-item">
-    <h3 onclick="toggleFAQ(this)">Design gráfico em Moçambique: tendências 2025</h3>
-    <p>As tendências incluem minimalismo, tipografia ousada, paletas quentes e design responsivo. Nossa equipe está antenada nas tendências globais para criar identidades visuais modernas e impactantes.</p>
+    <section id="produtos" class="products full-width visible">
+  <h2>Produtos à Venda</h2>
+
+  <div class="filtros-produtos">
+  <button class="filtro-btn active" data-filtro="todos">Todos</button>
+  <button class="filtro-btn" data-filtro="impressoras">Impressoras</button>
+  <button class="filtro-btn" data-filtro="tintas">Tintas</button>
+  <button class="filtro-btn" data-filtro="papelaria">Papelaria</button>
+</div>
+
+  <div class="grid">
+    
+    <!-- Produto 1: Epson L3250 -->
+    <div class="card produto impressoras">
+      <div class="galeria-servico carrossel">
+        <img class="slide active" src="/imagens/copiadora_Impressora_EPSON_L3250.jpg" alt="Impressora Epson L3250">
+        <img class="slide" src="/imagens/copiadora_Impressora_EPSON_L3250_2.jpg" alt="Impressora Epson L3250 - outra vista">
+      </div>
+      <div class="desc">
+        <h3>Impressora Epson L3250</h3>
+        <p>
+          Impressora multifuncional com Wi-Fi. Perfeita para escritórios e uso doméstico. Alta economia e rendimento com tanque de tinta.
+        </p>
+        <a
+  href="https://wa.me/258870779922?text=Olá,%20tenho%20interesse%20no%20produto:%20Impressora"
+  class="btn-whatsapp"
+  target="_blank"
+>
+  Comprar pelo WhatsApp
+</a>
+
+      </div>
+    </div>
+
+    <!-- Produto 2: Agrafador Deli -->
+    <div class="card produto papelaria">
+      <div class="galeria-servico carrossel">
+        <img class="slide active" src="/imagens/agrafador_deli.jpg" alt="Agrafador da marca Deli">
+      </div>
+      <div class="desc">
+        <h3>Agrafador Deli</h3>
+        <p>
+          Agrafador resistente e de alta performance. Ideal para escritórios, escolas e uso diário.
+        </p>
+        <a
+  href="https://wa.me/258870779922?text=Olá,%20tenho%20interesse%20no%20produto:%20Agrafador"
+  class="btn-whatsapp"
+  target="_blank"
+>
+  Comprar pelo WhatsApp
+</a>
+
+      </div>
+    </div>
+
+    <!-- Produto 3: Tintas Epson -->
+    <div class="card produto tintas">
+      <div class="galeria-servico carrossel">
+        <img class="slide active" src="/imagens/tintas_para_impressoras.jpg" alt="Tintas Epson">
+        <img class="slide" src="/imagens/tintas_para_impressoras_1.jpg" alt="Tintas Epson adicionais">
+        <img class="slide" src="/imagens/tintas_para_impressoras_2.jpg" alt="Conjunto completo de tintas Epson">
+      </div>
+      <div class="desc">
+        <h3>Tintas Originais Epson</h3>
+        <p>
+          Compatíveis com impressoras L1110, L1111 L3150, L3250, L3210 e similares. Alta qualidade e durabilidade.
+        </p>
+        <a
+  href="https://wa.me/258870779922?text=Olá,%20tenho%20interesse%20no%20produto:%20Tinta"
+  class="btn-whatsapp"
+  target="_blank"
+>
+  Comprar pelo WhatsApp
+</a>
+
+      </div>
+    </div>
+
+    <!-- Produto 4: Resmas e Blocos -->
+    <div class="card produto papelaria">
+      <div class="galeria-servico carrossel">
+        <img class="slide active" src="/imagens/bloco(resma)_trident_eco_green.jpg" alt="Resma Trident Eco Green">
+        <img class="slide" src="/imagens/caixa_de_papel_A4.jpg" alt="Caixa de papel Navigator A4">
+      </div>
+      <div class="desc">
+        <h3>Papel A4 - Resmas e Caixas</h3>
+        <p>
+          Resmas Trident Eco Green e caixas Navigator. Perfeitas para impressão em larga escala.
+        </p>
+        <a
+  href="https://wa.me/258870779922?text=Olá,%20tenho%20interesse%20no%20produto:%20Resma%20%20ou%20bloco"
+  class="btn-whatsapp"
+  target="_blank"
+>
+  Comprar pelo WhatsApp
+</a>
+
+      </div>
+    </div>
+
   </div>
 </section>
+
+  </div>
+</section>
+
+
+    <section id="faq" class="visible">
+      <h2>Perguntas Frequentes</h2>
+      <div class="faq-item">
+        <h3 onclick="toggleFAQ(this)">Como funciona a serigrafia?</h3>
+        <p>
+          A tinta passa por uma tela para estampar o tecido. É uma técnica
+          durável e de alta qualidade.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3 onclick="toggleFAQ(this)">
+          Quanto custa uma impressão personalizada?
+        </h3>
+        <p>
+          Depende do tipo de material e quantidade. Mas garantimos preço justo e
+          qualidade garantida.
+        </p>
+      </div>
+      <div class="faq-item">
+        <h3 onclick="toggleFAQ(this)">
+          Design gráfico em Moçambique: tendências 2025
+        </h3>
+        <p>
+          Minimalismo, tipografia ousada e paletas quentes estão em alta.
+          Estamos ligados nessas tendências.
+        </p>
+      </div>
+    </section>
 
     <section id="contato" class="visible">
       <h2>Contato</h2>
@@ -228,63 +398,78 @@
       </form>
     </section>
 
-    <footer>
-	    <div class="social">
-    <a href="https://www.facebook.com/profile.php?id=100071420232275" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
-    </a>
-    <a href="https://www.instagram.com/maiasmultservice" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-    </a>
-  </div>
 
+    <footer>
+      <div class="social">
+        <a
+          href="https://www.facebook.com/profile.php?id=100071420232275"
+          target="_blank"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+            alt="Facebook"
+          />
+        </a>
+        <a href="https://www.instagram.com/maiasmultservice" target="_blank">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+            alt="Instagram"
+          />
+        </a>
+      </div>
       <p>© 2025 Maias Mult-Service. Todos os direitos reservados.</p>
-      <p>Desenolvido por Rollertrack</p>
+      <p>Desenvolvido por Rollertrack</p>
     </footer>
 
-    <script src="script.js"></script><div class="whatsapp-float">
-  <a href="https://wa.me/258870779922" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-  </a>
-</div>
-  <!-- Code injected by live-server -->
-<script>
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]>
+    <div class="whatsapp-float">
+      <a href="https://wa.me/258870779922" target="_blank">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+          alt="WhatsApp"
+        />
+      </a>
+    </div>
+
+    <!-- Script do carrossel -->
+    <script>
+      document.querySelectorAll(".carrossel").forEach((carrossel) => {
+        const slides = carrossel.querySelectorAll(".slide");
+        let index = 0;
+        setInterval(() => {
+          slides[index].classList.remove("active");
+          index = (index + 1) % slides.length;
+          slides[index].classList.add("active");
+        }, 5000);
+      });
+
+      function toggleFAQ(el) {
+        const p = el.nextElementSibling;
+        p.style.display = p.style.display === "block" ? "none" : "block";
+      }
+    </script>
+
+    <script>
+  document.querySelectorAll('.filtro-btn').forEach(botao => {
+    botao.addEventListener('click', () => {
+      const filtro = botao.dataset.filtro;
+      const produtos = document.querySelectorAll('.produto');
+
+      // Atualiza o botão ativo
+      document.querySelectorAll('.filtro-btn').forEach(btn => btn.classList.remove('active'));
+      botao.classList.add('active');
+
+      produtos.forEach(produto => {
+        const classeProduto = Array.from(produto.classList).map(cls => cls.toLowerCase());
+        if (filtro === 'todos' || classeProduto.includes(filtro)) {
+          produto.style.display = 'block';
+        } else {
+          produto.style.display = 'none';
+        }
+      });
+    });
+  });
 </script>
 
+  </body>
+</html>
 
-</body></html>
